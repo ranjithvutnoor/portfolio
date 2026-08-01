@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">CUDA and im2col acceleration illustration</title>
+  <desc id="desc">An abstract tiled matrix showing convolution lowering into GEMM and GPU shared memory.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#eef1eb"/>
+      <stop offset="1" stop-color="#dbe8e1"/>
+    </linearGradient>
+    <linearGradient id="gpu" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#24695a"/>
+      <stop offset="1" stop-color="#143f35"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="20" flood-color="#315649" flood-opacity=".15"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="44" fill="url(#bg)"/>
+  <circle cx="1000" cy="90" r="230" fill="#49677d" opacity=".08"/>
+  <circle cx="80" cy="580" r="260" fill="#24695a" opacity=".07"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(90 160)">
+      <rect width="285" height="310" rx="32" fill="#fbfcfa" stroke="#9aafa4"/>
+      <text x="142.5" y="48" font-family="Inter,Arial" font-weight="700" font-size="22" text-anchor="middle" fill="#20312a">Conv2D windows</text>
+      <g transform="translate(44 82)" stroke="#7a9488">
+        <g fill="#dcebe5">
+          <rect x="0" y="0" width="54" height="54" rx="10"/><rect x="67" y="0" width="54" height="54" rx="10"/><rect x="134" y="0" width="54" height="54" rx="10"/>
+          <rect x="0" y="67" width="54" height="54" rx="10"/><rect x="67" y="67" width="54" height="54" rx="10" fill="#a7cbbc"/><rect x="134" y="67" width="54" height="54" rx="10"/>
+          <rect x="0" y="134" width="54" height="54" rx="10"/><rect x="67" y="134" width="54" height="54" rx="10"/><rect x="134" y="134" width="54" height="54" rx="10"/>
+        </g>
+      </g>
+      <text x="142.5" y="286" font-family="Inter,Arial" font-size="13" text-anchor="middle" fill="#66776f">sliding local receptive fields</text>
+    </g>
+    <g transform="translate(455 115)">
+      <rect width="290" height="400" rx="34" fill="#fbfcfa" stroke="#9aafa4"/>
+      <text x="145" y="50" font-family="Inter,Arial" font-weight="700" font-size="24" text-anchor="middle" fill="#20312a">im2col lowering</text>
+      <g transform="translate(57 83)" stroke="#7a9488">
+        <g fill="#e5eee9">
+          <rect x="0" y="0" width="176" height="34" rx="8"/>
+          <rect x="0" y="46" width="176" height="34" rx="8"/>
+          <rect x="0" y="92" width="176" height="34" rx="8"/>
+          <rect x="0" y="138" width="176" height="34" rx="8"/>
+          <rect x="0" y="184" width="176" height="34" rx="8"/>
+          <rect x="0" y="230" width="176" height="34" rx="8"/>
+        </g>
+        <g fill="#24695a" opacity=".55">
+          <rect x="12" y="11" width="30" height="12" rx="6"/><rect x="52" y="11" width="45" height="12" rx="6"/><rect x="108" y="11" width="55" height="12" rx="6"/>
+          <rect x="12" y="57" width="58" height="12" rx="6"/><rect x="80" y="57" width="29" height="12" rx="6"/><rect x="118" y="57" width="45" height="12" rx="6"/>
+          <rect x="12" y="103" width="42" height="12" rx="6"/><rect x="64" y="103" width="61" height="12" rx="6"/><rect x="135" y="103" width="28" height="12" rx="6"/>
+          <rect x="12" y="149" width="62" height="12" rx="6"/><rect x="84" y="149" width="35" height="12" rx="6"/><rect x="129" y="149" width="34" height="12" rx="6"/>
+          <rect x="12" y="195" width="29" height="12" rx="6"/><rect x="51" y="195" width="69" height="12" rx="6"/><rect x="130" y="195" width="33" height="12" rx="6"/>
+          <rect x="12" y="241" width="49" height="12" rx="6"/><rect x="71" y="241" width="42" height="12" rx="6"/><rect x="123" y="241" width="40" height="12" rx="6"/>
+        </g>
+      </g>
+      <text x="145" y="376" font-family="Inter,Arial" font-size="13" text-anchor="middle" fill="#66776f">convolution becomes matrix multiplication</text>
+    </g>
+    <g transform="translate(825 160)">
+      <rect width="285" height="310" rx="32" fill="url(#gpu)" stroke="#123b32"/>
+      <text x="142.5" y="48" font-family="Inter,Arial" font-weight="700" font-size="22" text-anchor="middle" fill="#fff">CUDA GEMM</text>
+      <g transform="translate(50 88)">
+        <rect width="185" height="154" rx="18" fill="#0f3028" stroke="#85c4af"/>
+        <g fill="#8fd0ba">
+          <rect x="18" y="18" width="30" height="30" rx="6"/><rect x="57" y="18" width="30" height="30" rx="6"/><rect x="96" y="18" width="30" height="30" rx="6"/><rect x="135" y="18" width="30" height="30" rx="6"/>
+          <rect x="18" y="58" width="30" height="30" rx="6"/><rect x="57" y="58" width="30" height="30" rx="6"/><rect x="96" y="58" width="30" height="30" rx="6"/><rect x="135" y="58" width="30" height="30" rx="6"/>
+          <rect x="18" y="98" width="30" height="30" rx="6"/><rect x="57" y="98" width="30" height="30" rx="6"/><rect x="96" y="98" width="30" height="30" rx="6"/><rect x="135" y="98" width="30" height="30" rx="6"/>
+        </g>
+      </g>
+      <text x="142.5" y="273" font-family="Inter,Arial" font-size="13" text-anchor="middle" fill="#cfe5dc">shared-memory tiled kernels</text>
+    </g>
+  </g>
+  <g fill="none" stroke="#607d70" stroke-width="5" stroke-linecap="round">
+    <path d="M375 315h54"/><path d="M745 315h54"/>
+  </g>
+  <g fill="#607d70"><path d="M429 315l-14-9v18z"/><path d="M799 315l-14-9v18z"/></g>
+</svg>

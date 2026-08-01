@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPU-accelerated industrial anomaly detection — Ranjith Vutnoor</title>
+  <meta name="description" content="IIT Bhilai M.Tech research combining MSCRED, ConvLSTM, time-series anomaly detection, CUDA programming, im2col/GEMM and a custom PyTorch extension.">
+  <meta name="author" content="Ranjith Vutnoor">
+  <meta name="theme-color" content="#1d5b4c">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ranjithvutnoor.github.io/portfolio/case-studies/cuda-mscred.html">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="GPU-accelerated industrial anomaly detection — Ranjith Vutnoor">
+  <meta property="og:description" content="IIT Bhilai M.Tech research combining MSCRED, ConvLSTM, time-series anomaly detection, CUDA programming, im2col/GEMM and a custom PyTorch extension.">
+  <meta property="og:url" content="https://ranjithvutnoor.github.io/portfolio/case-studies/cuda-mscred.html">
+  <meta property="og:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="GPU-accelerated industrial anomaly detection — Ranjith Vutnoor">
+  <meta name="twitter:description" content="IIT Bhilai M.Tech research combining MSCRED, ConvLSTM, time-series anomaly detection, CUDA programming, im2col/GEMM and a custom PyTorch extension.">
+  <meta name="twitter:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-base="..">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="../index.html" aria-label="Ranjith Vutnoor — home">
+      <span class="brand-mark" aria-hidden="true">RV</span>
+      <span class="brand-label">Ranjith Vutnoor</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../index.html#work" aria-current="page">Work</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../writing.html">Writing</a></nav>
+    <div class="nav-actions">
+      <button class="icon-button command-trigger" type="button" data-command-trigger aria-label="Open command palette" title="Search and navigate (Ctrl/⌘ K)">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      </button>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+        <svg data-theme-icon aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-panel" id="mobile-navigation" data-mobile-panel aria-label="Mobile navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../index.html#work" aria-current="page">Work</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../writing.html">Writing</a></nav>
+<main id="main-content">
+  <section class="case-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#work">Work</a><span>/</span><span aria-current="page">GPU-accelerated industrial anomaly detection</span></nav>
+      <h1 class="case-title">GPU-accelerated industrial anomaly detection</h1>
+      <p class="case-lead">IIT Bhilai M.Tech research combining MSCRED, ConvLSTM, time-series anomaly detection, CUDA programming, im2col/GEMM and a custom PyTorch extension.</p>
+      <div class="case-facts"><div class="case-fact"><div class="case-fact-label">Institution</div><div class="case-fact-value">IIT Bhilai</div></div><div class="case-fact"><div class="case-fact-label">Research</div><div class="case-fact-value">Industrial time series</div></div><div class="case-fact"><div class="case-fact-label">Acceleration</div><div class="case-fact-value">CUDA · im2col · GEMM</div></div><div class="case-fact"><div class="case-fact-label">Result</div><div class="case-fact-value">12.68× encoder speed-up</div></div></div>
+      <figure class="case-cover"><img src="../assets/images/cuda-grid.svg" alt="" width="1200" height="630"></figure>
+    </div>
+  </section>
+  <div class="case-body">
+    <aside class="case-nav" aria-label="Case study sections"><p class="case-nav-title">On this page</p><a href="#problem">Problem</a><a href="#framework">MSCRED</a><a href="#bottleneck">Bottleneck</a><a href="#cuda">CUDA approach</a><a href="#results">Results</a><a href="#limits">Limits</a><a href="#lessons">Lessons</a></aside>
+    <article class="prose">
+<h2 id="problem">Research problem</h2>
+<p>Industrial plants generate large volumes of multivariate sensor data. The thesis explored anomaly detection for a bar and rod mill, including HMD flickering, looper behaviour, overshoot, undershoot and cobble-related patterns. The analysis covered approximately <strong>1,860 PLC signals</strong>.</p>
+<p>The work combined domain-specific signal analysis with a multivariate deep-learning framework. Univariate procedures used operational periods, moving averages, lags and percentage deviation; multivariate detection used reconstruction error from an MSCRED-style architecture.</p>
+<h2 id="framework">MSCRED framework</h2>
+<p>MSCRED models correlations among signals through signature matrices at multiple temporal scales. A convolutional encoder extracts spatial relationships, ConvLSTM layers model temporal behaviour and a decoder reconstructs the expected signal-correlation structure. Large reconstruction errors indicate anomalous behaviour.</p>
+<div class="architecture-flow"><div class="flow-step"><strong>Signals</strong>Multivariate industrial time series.</div><div class="flow-step"><strong>Signature matrices</strong>Multi-scale inter-signal correlations.</div><div class="flow-step"><strong>CNN encoder</strong>Spatial feature extraction.</div><div class="flow-step"><strong>ConvLSTM</strong>Temporal dependencies.</div><div class="flow-step"><strong>Decoder</strong>Reconstruction-based anomaly score.</div></div>
+<h2 id="bottleneck">Performance bottleneck</h2>
+<p>Training and inference involved repeated convolution operations across the encoder, ConvLSTM and decoder. I profiled this path and investigated a GPU implementation rather than treating the framework as a black box.</p>
+<h2 id="cuda">CUDA, im2col and GEMM</h2>
+<p>Conv2D was transformed into a matrix-multiplication problem using <strong>lowering/im2col</strong>. Each local convolution window is expanded into a row or column of a larger matrix, allowing the core computation to be expressed as GEMM.</p>
+<p>I implemented CUDA-based parallel matrix multiplication and compared two GPU paths:</p>
+<ul><li>A global-memory implementation.</li><li>A tiled implementation using GPU shared memory to reduce repeated high-latency global-memory access.</li></ul>
+<p>The GPU path was integrated through a <strong>custom PyTorch extension</strong>, allowing model components to invoke the accelerated computation from the Python training workflow.</p>
+<h2 id="results">Benchmark results</h2>
+<p>The reported benchmark used 36,000 data points, 30 features, batch size 128 and 32 threads on an NVIDIA RTX A6000 GPU.</p>
+<table><thead><tr><th>Component</th><th>CPU</th><th>GPU: global memory</th><th>GPU: shared memory</th></tr></thead><tbody><tr><td>Encoder</td><td>300 s</td><td>27.492 s</td><td><strong>23.664 s</strong></td></tr><tr><td>ConvLSTM</td><td>1,200 s</td><td>909.208 s</td><td><strong>847.260 s</strong></td></tr><tr><td>Total execution</td><td>2,700 s</td><td>1,594 s</td><td><strong>1,481 s</strong></td></tr><tr><td>F1 score</td><td>0.930</td><td>0.936</td><td><strong>0.941</strong></td></tr></tbody></table>
+<ul><li><strong>12.68× faster encoder execution</strong> than the CPU implementation.</li><li><strong>1.82× faster total execution</strong>, approximately a 45.1% runtime reduction.</li><li>Comparable predictive quality, with F1 remaining around 0.93–0.94.</li></ul>
+<h2 id="limits">Limitations and publication scope</h2>
+<p>The raw industrial dataset and plant-specific details should not be published without explicit authorisation. A public implementation should use synthetic or anonymised signals while preserving the architecture, CUDA kernels, benchmark methodology and lessons learned.</p>
+<h2 id="lessons">What I learned</h2>
+<ul><li>Framework-level optimisation requires understanding both model architecture and hardware memory behaviour.</li><li>im2col improves compatibility with GEMM but increases intermediate memory; tile size and data movement matter.</li><li>A strong benchmark separates computational speed-up from predictive quality.</li><li>Custom extensions are most useful when they preserve a clean model-level interface.</li></ul>
+</article>
+  </div>
+  <section class="next-project"><div class="container"><a class="next-project-card" href="./nemotron.html"><div><small>Next case study</small><h2>NVIDIA Nemotron structured reasoning</h2></div><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span data-current-year>2026</span> Ranjith Vutnoor · Built with semantic HTML, CSS and JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ranjithvutnoor" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/ranjithvutnoor/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.kaggle.com/ranjithvutnoor" target="_blank" rel="noreferrer">Kaggle</a>
+      <button type="button" data-copy-email style="border:0;background:transparent;color:inherit;padding:0;cursor:pointer">Copy email</button>
+    </div>
+  </div>
+</footer>
+<div class="command-overlay" data-command-overlay aria-hidden="true">
+  <div class="command-dialog" data-command-dialog role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="command-search"><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input data-command-input type="search" placeholder="Search pages and actions…" aria-label="Search commands"></div>
+    <div class="command-results" data-command-results></div>
+    <div class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

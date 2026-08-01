@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EvalStudio — LLM quality workspace — Ranjith Vutnoor</title>
+  <meta name="description" content="A reusable evaluation workflow for retrieval relevance, repeated-run stability, LLM-assisted judging and golden-set regression.">
+  <meta name="author" content="Ranjith Vutnoor">
+  <meta name="theme-color" content="#1d5b4c">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ranjithvutnoor.github.io/portfolio/case-studies/evalstudio.html">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="EvalStudio — LLM quality workspace — Ranjith Vutnoor">
+  <meta property="og:description" content="A reusable evaluation workflow for retrieval relevance, repeated-run stability, LLM-assisted judging and golden-set regression.">
+  <meta property="og:url" content="https://ranjithvutnoor.github.io/portfolio/case-studies/evalstudio.html">
+  <meta property="og:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="EvalStudio — LLM quality workspace — Ranjith Vutnoor">
+  <meta name="twitter:description" content="A reusable evaluation workflow for retrieval relevance, repeated-run stability, LLM-assisted judging and golden-set regression.">
+  <meta name="twitter:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-base="..">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="../index.html" aria-label="Ranjith Vutnoor — home">
+      <span class="brand-mark" aria-hidden="true">RV</span>
+      <span class="brand-label">Ranjith Vutnoor</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../index.html#work" aria-current="page">Work</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../writing.html">Writing</a></nav>
+    <div class="nav-actions">
+      <button class="icon-button command-trigger" type="button" data-command-trigger aria-label="Open command palette" title="Search and navigate (Ctrl/⌘ K)">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      </button>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+        <svg data-theme-icon aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-panel" id="mobile-navigation" data-mobile-panel aria-label="Mobile navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../index.html#work" aria-current="page">Work</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../writing.html">Writing</a></nav>
+<main id="main-content">
+  <section class="case-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#work">Work</a><span>/</span><span aria-current="page">EvalStudio — LLM quality workspace</span></nav>
+      <h1 class="case-title">EvalStudio — LLM quality workspace</h1>
+      <p class="case-lead">A reusable evaluation workflow for retrieval relevance, repeated-run stability, LLM-assisted judging and golden-set regression.</p>
+      <div class="case-facts"><div class="case-fact"><div class="case-fact-label">Area</div><div class="case-fact-value">LLM evaluation</div></div><div class="case-fact"><div class="case-fact-label">Focus</div><div class="case-fact-value">Repeatability + regression</div></div><div class="case-fact"><div class="case-fact-label">Methods</div><div class="case-fact-value">Metrics · Judge · Golden set</div></div><div class="case-fact"><div class="case-fact-label">Use</div><div class="case-fact-value">Release confidence</div></div></div>
+      <figure class="case-cover"><img src="../assets/images/evaluation.svg" alt="" width="1200" height="630"></figure>
+    </div>
+  </section>
+  <div class="case-body">
+    <aside class="case-nav" aria-label="Case study sections"><p class="case-nav-title">On this page</p><a href="#problem">Problem</a><a href="#design">Design</a><a href="#metrics">Metrics</a><a href="#workflow">Workflow</a><a href="#lessons">Lessons</a></aside>
+    <article class="prose">
+<h2 id="problem">Why evaluation needed its own system</h2>
+<p>LLM applications can appear better or worse across runs because retrieval candidates, generated language and model behaviour vary. A single demonstration is not enough to decide whether a prompt, model or retrieval change is safe to release.</p>
+<h2 id="design">Evaluation design</h2>
+<p>EvalStudio was conceived as a quality workspace connecting reusable datasets, repeatability analysis, automated scoring and regression review.</p>
+<div class="architecture-flow"><div class="flow-step"><strong>Golden set</strong>Questions, expected evidence and review metadata.</div><div class="flow-step"><strong>Experiment</strong>Model, prompt and retrieval configuration.</div><div class="flow-step"><strong>Repeated runs</strong>Measure stability across executions.</div><div class="flow-step"><strong>Scoring</strong>Metrics plus LLM-assisted judgement.</div><div class="flow-step"><strong>Release gate</strong>Compare against a trusted baseline.</div></div>
+<h2 id="metrics">Metrics and signals</h2>
+<ul><li><strong>Retrieval relevance:</strong> MRR, NDCG and hit rate.</li><li><strong>Repeatability:</strong> RMSE-style comparison across repeated result vectors.</li><li><strong>Grounding:</strong> whether claims are supported by retrieved evidence.</li><li><strong>Completeness:</strong> whether the answer covers the question’s essential parts.</li><li><strong>Citation quality:</strong> whether sources are present, traceable and aligned with claims.</li><li><strong>Operational signals:</strong> latency, failures, retries and token usage where available.</li></ul>
+<h2 id="workflow">Regression workflow</h2>
+<p>A proposed model or prompt change is run against the same versioned dataset as the baseline. Results are compared by category, not only as one average. Failed examples become inputs for prompt, retrieval or ingestion diagnosis.</p>
+<p>This makes evaluation a continuous engineering loop:</p>
+<ol><li>Capture representative questions and known failures.</li><li>Assign expected evidence or relevance labels.</li><li>Run baseline and candidate configurations.</li><li>Compare metrics, repeatability and qualitative judgements.</li><li>Review regressions before release.</li><li>Add newly discovered edge cases to the dataset.</li></ol>
+<h2 id="lessons">What I learned</h2>
+<ul><li>An evaluation platform should make failures inspectable, not hide them behind one score.</li><li>Question categories matter because improvements are rarely uniform.</li><li>LLM-as-judge is useful as one signal, but it needs calibration and human review.</li><li>Evaluation data requires product ownership: versioning, documentation and controlled change.</li></ul>
+</article>
+  </div>
+  <section class="next-project"><div class="container"><a class="next-project-card" href="./cuda-mscred.html"><div><small>Next case study</small><h2>GPU-accelerated anomaly detection</h2></div><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span data-current-year>2026</span> Ranjith Vutnoor · Built with semantic HTML, CSS and JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ranjithvutnoor" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/ranjithvutnoor/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.kaggle.com/ranjithvutnoor" target="_blank" rel="noreferrer">Kaggle</a>
+      <button type="button" data-copy-email style="border:0;background:transparent;color:inherit;padding:0;cursor:pointer">Copy email</button>
+    </div>
+  </div>
+</footer>
+<div class="command-overlay" data-command-overlay aria-hidden="true">
+  <div class="command-dialog" data-command-dialog role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="command-search"><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input data-command-input type="search" placeholder="Search pages and actions…" aria-label="Search commands"></div>
+    <div class="command-results" data-command-results></div>
+    <div class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

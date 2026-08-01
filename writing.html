@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Writing and technical notes — Ranjith Vutnoor</title>
+  <meta name="description" content="Technical writing outlines by Ranjith Vutnoor on enterprise RAG, CUDA, MSCRED, PyTorch and NVIDIA Nemotron fine-tuning.">
+  <meta name="author" content="Ranjith Vutnoor">
+  <meta name="theme-color" content="#1d5b4c">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ranjithvutnoor.github.io/portfolio/writing.html">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="./site.webmanifest">
+  <link rel="preload" href="./assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Writing and technical notes — Ranjith Vutnoor">
+  <meta property="og:description" content="Technical writing outlines by Ranjith Vutnoor on enterprise RAG, CUDA, MSCRED, PyTorch and NVIDIA Nemotron fine-tuning.">
+  <meta property="og:url" content="https://ranjithvutnoor.github.io/portfolio/writing.html">
+  <meta property="og:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Writing and technical notes — Ranjith Vutnoor">
+  <meta name="twitter:description" content="Technical writing outlines by Ranjith Vutnoor on enterprise RAG, CUDA, MSCRED, PyTorch and NVIDIA Nemotron fine-tuning.">
+  <meta name="twitter:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-base=".">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="./index.html" aria-label="Ranjith Vutnoor — home">
+      <span class="brand-mark" aria-hidden="true">RV</span>
+      <span class="brand-label">Ranjith Vutnoor</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a class="nav-link" href="./index.html">Home</a><a class="nav-link" href="./index.html#work">Work</a><a class="nav-link" href="./index.html#experience">Experience</a><a class="nav-link" href="./writing.html" aria-current="page">Writing</a></nav>
+    <div class="nav-actions">
+      <button class="icon-button command-trigger" type="button" data-command-trigger aria-label="Open command palette" title="Search and navigate (Ctrl/⌘ K)">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      </button>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+        <svg data-theme-icon aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-panel" id="mobile-navigation" data-mobile-panel aria-label="Mobile navigation"><a class="nav-link" href="./index.html">Home</a><a class="nav-link" href="./index.html#work">Work</a><a class="nav-link" href="./index.html#experience">Experience</a><a class="nav-link" href="./writing.html" aria-current="page">Writing</a></nav>
+<main id="main-content">
+  <section class="writing-hero"><div class="container"><p class="eyebrow">Writing and technical notes</p><h1>Engineering ideas, documented with context and constraints.</h1><p>These outlines will become full articles on this site and DEV Community. They are grounded in implemented systems and research rather than generic tutorials.</p></div></section>
+  <section class="container note-list" aria-label="Article outlines">
+    <a class="note-item reveal" id="cuda" href="./case-studies/cuda-mscred.html"><span class="note-topic">CUDA · PyTorch</span><span><h2>GPU-accelerating MSCRED with im2col and GEMM</h2><p>Problem framing, model bottleneck, custom extension design, shared-memory tiling, benchmarks and limitations.</p></span><span class="note-state">Outline ready <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="note-item reveal" id="nemotron" href="./case-studies/nemotron.html"><span class="note-topic">QLoRA · Reasoning</span><span><h2>Fine-tuning Nemotron-3-Nano-30B for structured reasoning</h2><p>Task taxonomy, compact synthetic traces, 4-bit adaptation, compatibility fixes and submission packaging.</p></span><span class="note-state">Outline ready <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="note-item reveal" id="rag" href="./case-studies/enterprise-rag.html"><span class="note-topic">RAG · Evaluation</span><span><h2>Engineering an evaluation-driven enterprise RAG pipeline</h2><p>Ingestion, query expansion, hybrid retrieval, reranking, reflective retries and retrieval metrics.</p></span><span class="note-state">Outline ready <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+    <a class="note-item reveal" href="./case-studies/evalstudio.html"><span class="note-topic">LLM quality</span><span><h2>Why LLM evaluation needs more than a single score</h2><p>Golden datasets, repeatability, LLM-as-judge, category-level regressions and quality gates.</p></span><span class="note-state">Outline ready <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+  </section>
+  <section class="section-sm"><div class="container contact-card reveal"><div><p class="section-kicker">Publishing plan</p><h2 style="font-size:clamp(2rem,4vw,3.6rem)">Original here. Distributed elsewhere.</h2><p>The portfolio will remain the canonical home. Articles can then be cross-posted to DEV using the original URL, with shorter summaries shared on LinkedIn.</p></div><div class="contact-actions"><a class="contact-link" href="https://dev.to/" target="_blank" rel="noreferrer"><span><span class="contact-link-label">Planned channel</span><span class="contact-link-value">DEV Community</span></span><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 4h6v6M20 4l-9 9"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg></a><a class="contact-link" href="mailto:ranjithvutnoor@gmail.com"><span><span class="contact-link-label">Discuss a topic</span><span class="contact-link-value">Send an email</span></span><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span data-current-year>2026</span> Ranjith Vutnoor · Built with semantic HTML, CSS and JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ranjithvutnoor" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/ranjithvutnoor/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.kaggle.com/ranjithvutnoor" target="_blank" rel="noreferrer">Kaggle</a>
+      <button type="button" data-copy-email style="border:0;background:transparent;color:inherit;padding:0;cursor:pointer">Copy email</button>
+    </div>
+  </div>
+</footer>
+<div class="command-overlay" data-command-overlay aria-hidden="true">
+  <div class="command-dialog" data-command-dialog role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="command-search"><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input data-command-input type="search" placeholder="Search pages and actions…" aria-label="Search commands"></div>
+    <div class="command-results" data-command-results></div>
+    <div class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="./assets/js/main.js" defer></script>
+</body>
+</html>

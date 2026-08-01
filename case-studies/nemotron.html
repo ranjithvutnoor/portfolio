@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NVIDIA Nemotron structured reasoning — Ranjith Vutnoor</title>
+  <meta name="description" content="A reasoning-data and parameter-efficient fine-tuning workflow for Nemotron-3-Nano-30B, including compact synthetic traces, 4-bit adaptation and model compatibility fixes.">
+  <meta name="author" content="Ranjith Vutnoor">
+  <meta name="theme-color" content="#1d5b4c">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://ranjithvutnoor.github.io/portfolio/case-studies/nemotron.html">
+  <link rel="icon" href="../assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="preload" href="../assets/css/styles.css" as="style">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="NVIDIA Nemotron structured reasoning — Ranjith Vutnoor">
+  <meta property="og:description" content="A reasoning-data and parameter-efficient fine-tuning workflow for Nemotron-3-Nano-30B, including compact synthetic traces, 4-bit adaptation and model compatibility fixes.">
+  <meta property="og:url" content="https://ranjithvutnoor.github.io/portfolio/case-studies/nemotron.html">
+  <meta property="og:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NVIDIA Nemotron structured reasoning — Ranjith Vutnoor">
+  <meta name="twitter:description" content="A reasoning-data and parameter-efficient fine-tuning workflow for Nemotron-3-Nano-30B, including compact synthetic traces, 4-bit adaptation and model compatibility fixes.">
+  <meta name="twitter:image" content="https://ranjithvutnoor.github.io/portfolio/assets/images/og-card.png">
+  
+  <script>
+    (function() {
+      try {
+        var stored = localStorage.getItem('portfolio-theme');
+        var theme = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        document.documentElement.dataset.theme = theme;
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body data-base="..">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="scroll-progress" aria-hidden="true"></div>
+<header class="site-header">
+  <div class="container nav-shell">
+    <a class="brand" href="../index.html" aria-label="Ranjith Vutnoor — home">
+      <span class="brand-mark" aria-hidden="true">RV</span>
+      <span class="brand-label">Ranjith Vutnoor</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../index.html#work" aria-current="page">Work</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../writing.html">Writing</a></nav>
+    <div class="nav-actions">
+      <button class="icon-button command-trigger" type="button" data-command-trigger aria-label="Open command palette" title="Search and navigate (Ctrl/⌘ K)">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+      </button>
+      <button class="icon-button" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+        <svg data-theme-icon aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
+      </button>
+      <button class="icon-button menu-button" type="button" data-menu-toggle aria-controls="mobile-navigation" aria-expanded="false" aria-label="Open navigation menu">
+        <svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+<nav class="mobile-panel" id="mobile-navigation" data-mobile-panel aria-label="Mobile navigation"><a class="nav-link" href="../index.html">Home</a><a class="nav-link" href="../index.html#work" aria-current="page">Work</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../writing.html">Writing</a></nav>
+<main id="main-content">
+  <section class="case-hero">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span>/</span><a href="../index.html#work">Work</a><span>/</span><span aria-current="page">NVIDIA Nemotron structured reasoning</span></nav>
+      <h1 class="case-title">NVIDIA Nemotron structured reasoning</h1>
+      <p class="case-lead">A reasoning-data and parameter-efficient fine-tuning workflow for Nemotron-3-Nano-30B, including compact synthetic traces, 4-bit adaptation and model compatibility fixes.</p>
+      <div class="case-facts"><div class="case-fact"><div class="case-fact-label">Host</div><div class="case-fact-value">NVIDIA · Kaggle</div></div><div class="case-fact"><div class="case-fact-label">Base model</div><div class="case-fact-value">Nemotron-3-Nano-30B</div></div><div class="case-fact"><div class="case-fact-label">Method</div><div class="case-fact-value">4-bit LoRA / PEFT</div></div><div class="case-fact"><div class="case-fact-label">Score</div><div class="case-fact-value">0.53 → 0.668</div></div></div>
+      <figure class="case-cover"><img src="../assets/images/nemotron-reasoning.svg" alt="" width="1200" height="630"></figure>
+    </div>
+  </section>
+  <div class="case-body">
+    <aside class="case-nav" aria-label="Case study sections"><p class="case-nav-title">On this page</p><a href="#challenge">Challenge</a><a href="#analysis">Task analysis</a><a href="#data">Synthetic data</a><a href="#training">Fine-tuning</a><a href="#engineering">Compatibility</a><a href="#submission">Submission</a><a href="#result">Result</a><a href="#lessons">Lessons</a></aside>
+    <article class="prose">
+<h2 id="challenge">Challenge</h2>
+<p>The NVIDIA Nemotron Model Reasoning Challenge asked participants to improve reasoning accuracy using the Nemotron-3-Nano-30B model. The final submission had to be a compatible LoRA adapter with rank no greater than 32. Evaluation used deterministic vLLM generation and extracted the final answer from a <code>\boxed{{}}</code> expression.</p>
+<h2 id="analysis">Benchmark analysis</h2>
+<p>I treated the task as a collection of reasoning families rather than one generic prompt. The working taxonomy covered bit manipulation, physics-style parameter inference, mathematical transformations, substitution ciphers, numeral systems and custom operator-rule discovery.</p>
+<p>Each family received a deterministic solving procedure: classify the task, inspect key diagnostics, generate a rule hypothesis, verify it against examples, apply it to the query and emit the exact answer format.</p>
+<h2 id="data">Synthetic reasoning data</h2>
+<p>The training data used compact reasoning traces so the adapter would learn a repeatable process without wasting sequence capacity. A typical trace followed:</p>
+<ol><li>Task-family classification.</li><li>Two or three decisive observations.</li><li>A candidate rule and verification across examples.</li><li>A concise “rule found” statement.</li><li>Application to the query.</li><li>A final answer inside <code>\boxed{{}}</code>.</li></ol>
+<p>Long exploratory chains and rejected hypotheses were removed from the training target. The goal was to teach the winning reasoning path while retaining verification.</p>
+<h2 id="training">4-bit QLoRA-style fine-tuning</h2>
+<p>The training workflow used Transformers, PEFT, Accelerate, bitsandbytes, TRL and Safetensors. The base model was loaded in low precision while a small set of LoRA adapter parameters remained trainable, enabling adaptation of a 30B-class model within practical GPU-memory limits.</p>
+<div class="callout"><span class="callout-title">Configuration accuracy</span>The public case study intentionally does not claim unverified LoRA alpha, dropout, learning rate, batch size or epoch values. Those should be published only from the final training script and adapter configuration.</div>
+<h2 id="engineering">Compatibility problems solved</h2>
+<p>The model architecture and 4-bit path exposed several implementation issues. I built a setup workflow that:</p>
+<ul><li>Downloaded and validated model shards before training.</li><li>Disabled a fused Mamba path that was incompatible with 4-bit weights.</li><li>Added a Python fallback for an RMSNorm-related path.</li><li>Resolved MoE <code>index_add_</code> and dummy-expert dtype mismatches.</li><li>Cleared cached model modules so patched source was used consistently.</li></ul>
+<h2 id="submission">Checkpoint and submission workflow</h2>
+<p>The final workflow selected <code>checkpoint-1056</code>, loaded its adapter weights, cast trainable parameters to float16, validated the required <code>adapter_config.json</code> and <code>adapter_model.safetensors</code> files, and packaged them into <code>submission.zip</code>.</p>
+<h2 id="result">Result</h2>
+<p>Across iterative data, prompting and fine-tuning experiments, the competition score improved from approximately <strong>0.53 to 0.668</strong>.</p>
+<h2 id="lessons">What I learned</h2>
+<ul><li>Reasoning-data quality and output discipline can matter more than simply increasing dataset size.</li><li>Deterministic evaluation changes the optimisation target: exact formatting is part of model quality.</li><li>Low-precision fine-tuning is as much a systems-integration problem as a modelling problem.</li><li>Checkpoint selection should combine training signals, local evaluation and competition feedback.</li></ul>
+</article>
+  </div>
+  <section class="next-project"><div class="container"><a class="next-project-card" href="./enterprise-rag.html"><div><small>Next case study</small><h2>Enterprise RAG and semantic search</h2></div><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div></section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div>© <span data-current-year>2026</span> Ranjith Vutnoor · Built with semantic HTML, CSS and JavaScript.</div>
+    <div class="footer-links">
+      <a href="https://github.com/ranjithvutnoor" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://www.linkedin.com/in/ranjithvutnoor/" target="_blank" rel="noreferrer">LinkedIn</a>
+      <a href="https://www.kaggle.com/ranjithvutnoor" target="_blank" rel="noreferrer">Kaggle</a>
+      <button type="button" data-copy-email style="border:0;background:transparent;color:inherit;padding:0;cursor:pointer">Copy email</button>
+    </div>
+  </div>
+</footer>
+<div class="command-overlay" data-command-overlay aria-hidden="true">
+  <div class="command-dialog" data-command-dialog role="dialog" aria-modal="true" aria-label="Command palette">
+    <div class="command-search"><svg aria-hidden="true" class="" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input data-command-input type="search" placeholder="Search pages and actions…" aria-label="Search commands"></div>
+    <div class="command-results" data-command-results></div>
+    <div class="command-footer"><span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span><span><kbd>Enter</kbd> open · <kbd>Esc</kbd> close</span></div>
+  </div>
+</div>
+<div class="toast" data-toast role="status" aria-live="polite"></div>
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>

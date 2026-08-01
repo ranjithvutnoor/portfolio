@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">LLM evaluation platform illustration</title>
+  <desc id="desc">An abstract dashboard showing golden datasets, repeatability, judge scoring, and regression gates.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#edf2ef"/><stop offset="1" stop-color="#dce7e1"/></linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="16" stdDeviation="22" flood-color="#315649" flood-opacity=".14"/></filter>
+  </defs>
+  <rect width="1200" height="630" rx="44" fill="url(#bg)"/>
+  <g filter="url(#shadow)" transform="translate(90 78)">
+    <rect width="1020" height="474" rx="34" fill="#fbfcfa" stroke="#99ada3"/>
+    <rect width="1020" height="66" rx="34" fill="#e7eeea"/>
+    <circle cx="36" cy="33" r="7" fill="#7e988c"/><circle cx="60" cy="33" r="7" fill="#9bb2a7"/><circle cx="84" cy="33" r="7" fill="#b2c2ba"/>
+    <text x="140" y="41" font-family="Inter,Arial" font-size="17" font-weight="700" fill="#20312a">EvalStudio · quality workspace</text>
+    <g transform="translate(34 98)" font-family="Inter,Arial">
+      <rect width="280" height="145" rx="22" fill="#f0f4f1" stroke="#b3c0ba"/>
+      <text x="24" y="34" font-size="12" fill="#66776f">GOLDEN DATASET</text>
+      <text x="24" y="76" font-size="34" font-weight="750" fill="#20312a">2.6k</text>
+      <text x="24" y="104" font-size="13" fill="#66776f">question + evidence pairs</text>
+      <g transform="translate(170 42)" fill="#dcebe5" stroke="#24695a"><rect width="76" height="16" rx="8"/><rect y="30" width="55" height="16" rx="8"/><rect y="60" width="68" height="16" rx="8"/></g>
+
+      <rect x="306" width="308" height="145" rx="22" fill="#f0f4f1" stroke="#b3c0ba"/>
+      <text x="330" y="34" font-size="12" fill="#66776f">REPEATABILITY</text>
+      <path d="M340 112c30-50 55-15 80-58s55 52 85 10 55 18 80-14" fill="none" stroke="#24695a" stroke-width="6" stroke-linecap="round"/>
+      <path d="M340 118c30-40 55-8 80-45s55 40 85 15 55 12 80-8" fill="none" stroke="#49677d" stroke-width="3" stroke-linecap="round" opacity=".7"/>
+
+      <rect x="640" width="312" height="145" rx="22" fill="#1d5b4c" stroke="#15483d"/>
+      <text x="664" y="34" font-size="12" fill="#cfe5dc">RELEASE GATE</text>
+      <circle cx="796" cy="81" r="38" fill="#9ad1bf"/>
+      <path d="M778 82l12 12 25-30" fill="none" stroke="#174f42" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="796" y="132" font-size="13" text-anchor="middle" fill="#fff">quality checks passed</text>
+
+      <rect y="171" width="600" height="205" rx="22" fill="#f0f4f1" stroke="#b3c0ba"/>
+      <text x="24" y="205" font-size="12" fill="#66776f">METRIC VIEW</text>
+      <g transform="translate(46 232)">
+        <path d="M0 115H500M0 75H500M0 35H500" stroke="#c2cec8"/>
+        <path d="M0 120L70 97 140 105 210 62 280 74 350 34 420 46 500 17" fill="none" stroke="#24695a" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+        <g fill="#24695a"><circle cx="70" cy="97" r="6"/><circle cx="140" cy="105" r="6"/><circle cx="210" cy="62" r="6"/><circle cx="280" cy="74" r="6"/><circle cx="350" cy="34" r="6"/><circle cx="420" cy="46" r="6"/><circle cx="500" cy="17" r="6"/></g>
+      </g>
+
+      <rect x="626" y="171" width="326" height="205" rx="22" fill="#f0f4f1" stroke="#b3c0ba"/>
+      <text x="650" y="205" font-size="12" fill="#66776f">LLM-AS-JUDGE</text>
+      <g transform="translate(650 230)">
+        <text x="0" y="20" font-size="13" fill="#56665f">Grounding</text><rect x="98" y="5" width="185" height="18" rx="9" fill="#d8e4de"/><rect x="98" y="5" width="151" height="18" rx="9" fill="#24695a"/>
+        <text x="0" y="66" font-size="13" fill="#56665f">Completeness</text><rect x="98" y="51" width="185" height="18" rx="9" fill="#d8e4de"/><rect x="98" y="51" width="163" height="18" rx="9" fill="#49677d"/>
+        <text x="0" y="112" font-size="13" fill="#56665f">Citations</text><rect x="98" y="97" width="185" height="18" rx="9" fill="#d8e4de"/><rect x="98" y="97" width="174" height="18" rx="9" fill="#24695a"/>
+      </g>
+    </g>
+  </g>
+</svg>

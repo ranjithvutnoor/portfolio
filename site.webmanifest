@@ -1,0 +1,17 @@
+{
+  "name": "Ranjith Vutnoor — AI / Machine Learning Portfolio",
+  "short_name": "Ranjith Vutnoor",
+  "description": "Portfolio focused on production RAG systems, LLM evaluation, CUDA and GPU-accelerated machine learning.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#f5f7f4",
+  "theme_color": "#1d5b4c",
+  "icons": [
+    {
+      "src": "./assets/images/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
